@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- Tells browser this is an HTML5 document -->
+<html lang="en"> <!-- Website language is English -->
+<head>
+    <meta charset="UTF-8" /> <!-- Supports all characters (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Page is mobile responsive -->
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>BMI Calculator</title> <!-- Title of webpage -->
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+        <!-- Select height unit -->
+        <div class="input-group">
+            <label for="height-unit">Height</label>
+            <select id="height-unit">
+                <option value="cm">cm</option> <!-- Height in centimeters -->
+                <option value="ft-in">ft, in</option> <!-- Height in feet & inches -->
+            </select>
+        </div>
+
+        <!-- Height input for cm -->
+        <div id="cm-input" class="input-group">
+            <input type="number" id="height-cm" placeholder="e.g., 180" />
+        </div>
+
+        <!-- Height input for feet & inches (hidden by default) -->
+        <div id="ft-in-input" class="input-group hidden">
+            <input type="number" id="height-ft" placeholder="ft" /> <!-- Feet -->
+            <input type="number" id="height-in" placeholder="in" /> <!-- Inches -->
+        </div>
+
+        <!-- Select weight unit -->
+        <div class="input-group">
+            <label for="weight-unit">Weight</label>
+            <select id="weight-unit">
+                <option value="kg">kg</option>
+                <option value="lbs">lbs</option>
+            </select>
+        </div>
+
+        <!-- Weight input -->
+        <div class="input-group">
+            <input type="number" id="weight" placeholder="e.g., 70" />
+        </div>
+
+        <!-- Button to calculate BMI -->
+        <button id="button">Calculate BMI</button>
+
+        <!-- Area to display result -->
+        <div id="result"></div>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
