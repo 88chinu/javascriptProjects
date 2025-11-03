@@ -1,0 +1,110 @@
+/* Basic Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Modern gradient background */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* The main calculator card */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Styles for input groups (label, select, input) */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Style for text boxes and dropdowns */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Highlight effect when clicking on an input */
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 5px rgba(118, 75, 162, 0.3);
+}
+
+/* Special layout for feet and inches */
+#ft-in-input {
+    display: flex;
+    gap: 15px; /* Adds space between the 'ft' and 'in' boxes */
+}
+
+/* The main calculate button */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* The result area */
+#result {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 30px; /* Prevents layout jump */
+}
+
+/* Special style for the BMI number */
+#result span {
+    color: #764ba2;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+/* Utility class to hide/show elements */
+.hidden {
+    display: none;
+}
