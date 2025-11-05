@@ -1,0 +1,97 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+        Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+/* --- Main Converter Card --- */
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Input Layout --- */
+.converter-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between columns */
+}
+
+.col {
+    flex: 1; /* Each column takes equal space */
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7); /* Translucent white input */
+    color: #333;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Style for input focus */
+input[type="number"]:focus {
+    background: #ffffff;
+    box-shadow: 0 0 0 3px #6e8efb;
+}
+
+/* Remove arrows from number input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 650px) {
+    .converter-row {
+        flex-direction: column; /* Stack columns on small screens */
+    }
+    .container {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
