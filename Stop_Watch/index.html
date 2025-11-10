@@ -2,39 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" 
-          content="IE=edge">
-    <meta name="viewport" 
-          content="width=device-width, initial-scale=1.0">
-    <title>Design Stopwatch using HTML CSS and JavaScript</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgraded Stopwatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="container">
-        <h1> Stop Watch</h1>
-        <div id="time">
-            <span class="digit" id="hr">
-                00</span>
-            <span class="txt">Hr</span>
-            <span class="digit" id="min">
-                00</span>
-            <span class="txt">Min</span>
-            <span class="digit" id="sec">
-                00</span>
-            <span class="txt">Sec</span>
-            <span class="digit" id="count">
-                00</span>
-        </div>
-        <div id="buttons">
-            <button class="btn" id="start">
-                Start</button>
-            <button class="btn" id="stop">
-                Stop</button>
-            <button class="btn" id="reset">
-                Reset</button>
+        <div class="stopwatch">
+            <h1>Stopwatch</h1>
+            
+            <div id="time">
+                <span class="digit" id="hr">00</span>
+                <span class="txt">Hr</span>
+                <span class="digit" id="min">00</span>
+                <span class="txt">Min</span>
+                <span class="digit" id="sec">00</span>
+                <span class="txt">Sec</span>
+                <span class="digit" id="count">00</span>
+            </div>
+            
+            <div id="buttons">
+                <button class="btn" id="start-stop">Start</button>
+                <button class="btn" id="lap">Lap</button>
+                <button class="btn" id="reset">Reset</button>
+            </div>
+            
+            <div class="laps-container">
+                <ul id="laps-list">
+                    </ul>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
-  
 </html>
