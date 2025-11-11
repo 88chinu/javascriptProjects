@@ -104,7 +104,18 @@ button:hover {
     margin-left: 10px;
 }
 
-/* Utility class to hide/show elements */
+/* Container transitions for a smoother feel */
+#cm-input,
+#ft-in-input {
+    transition: all 0.3s ease; /* Smooth fade/slide */
+}
+
+
+/* Hidden state */
 .hidden {
-    display: none;
+    opacity: 0;               /* Fade out */
+    max-height: 0;            /* Collapse height */
+    overflow: hidden;         /* Prevent scroll */
+    margin: 0;
+    padding: 0;
 }
